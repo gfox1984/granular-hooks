@@ -2,11 +2,31 @@
   "name": "granular-hooks",
   "version": "0.0.1",
   "description": "Good old React hooks, with added granularity",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
   "repository": "https://github.com/gfox1984/granular-hooks.git",
   "author": "Guillaume Renard",
   "license": "MIT",
-  "keywords": ["react", "utils", "hook", "hooks", "granular", "useEffect", "useGranularEffect"],
+  "keywords": [
+    "react",
+    "utils",
+    "hook",
+    "hooks",
+    "granular",
+    "useEffect",
+    "useGranularEffect"
+  ],
   "homepage": "https://github.com/gfox1984/granular-hooks",
-  "bugs": {"url": "https://github.com/gfox1984/granular-hooks/issues"}
+  "bugs": {
+    "url": "https://github.com/gfox1984/granular-hooks/issues"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
 }
