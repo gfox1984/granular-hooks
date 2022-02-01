@@ -1,1 +1,1 @@
-export * from "./hooks/useGranularEffect";
+export { default as useGranularEffect } from "./hooks/useGranularEffect";

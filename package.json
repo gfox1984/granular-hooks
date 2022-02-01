@@ -29,7 +29,7 @@
     "type-check": "tsc --pretty --noEmit",
     "lint": "eslint . --ext .ts",
     "format": "yarn prettier --write .",
-    "prepare": "husky install"
+    "prepare": "tsc && husky install"
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
@@ -46,6 +46,7 @@
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
+    "@testing-library/react-hooks": "^7.0.2",
     "@types/jest": "^27.4.0",
     "@types/react": "^17.0.38",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
@@ -60,6 +61,7 @@
     "lint-staged": "^12.3.2",
     "prettier": "2.5.1",
     "react": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.5"
   }

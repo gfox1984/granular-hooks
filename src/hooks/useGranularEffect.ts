@@ -1,6 +1,6 @@
 import { EffectCallback, DependencyList, useRef, useEffect } from "react";
 
-export const useGranularEffect = (
+const useGranularEffect = (
   effect: EffectCallback,
   primaryDeps: DependencyList,
   secondaryDeps: DependencyList
@@ -15,3 +15,5 @@ export const useGranularEffect = (
 
   return useEffect(effect, ref.current);
 };
+
+export default useGranularEffect;
