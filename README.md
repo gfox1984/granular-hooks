@@ -4,7 +4,7 @@ The [React hooks](https://reactjs.org/docs/hooks-intro.html) you know, with adde
 
 ## The problem
 
-Who hasn't been in the situation where you need to run an effect
+Who hasn't been in the situation where s/he needs an effect to run
 only when _some_ of its dependencies have changed? Take this code for instance:
 
 ```typescript
@@ -96,7 +96,7 @@ Below are the features we're working on:
 
 You could but that would defeat the purpose of the hook. You might as well call `useEffect` directly.
 
-### Why use `useGranularEffect` when I can just omit some dependencies in `useEffect`
+### Why use `useGranularEffect` when I can just omit some dependencies in `useEffect`?
 
 While you could technically do so, it would violate the rules exposed in [conditionally firing an effect](https://reactjs.org/docs/hooks-reference.html#conditionally-firing-an-effect):
 

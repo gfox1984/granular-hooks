@@ -1,7 +1,7 @@
 {
   "name": "granular-hooks",
   "version": "0.0.1",
-  "description": "Good old React hooks, with added granularity",
+  "description": "The React hooks you know, with added granularity",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
