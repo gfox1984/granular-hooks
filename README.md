@@ -1,6 +1,6 @@
 # granular-hooks
 
-The [React hooks](https://reactjs.org/docs/hooks-intro.html) you know, with added granularity.
+The [React hooks](https://reactjs.org/docs/hooks-intro.html) you know, with added granularity. You can [read more about this](https://medium.com/@gfox1984/a-more-granular-useeffect-9c8ca3d9f634) on Medium.
 
 ## The problem
 
