@@ -16,7 +16,7 @@ useEffect(() => {
 }, [value, condition]);
 ```
 
-Here, the effect prints to the console each time `value` or `condition` change. You cannot print to the console ONLY when `value` changes because `useEffect` requires that [all values used by the effect are passed in the array of dependencies](https://reactjs.org/docs/hooks-reference.html#conditionally-firing-an-effect).
+Here, the effect prints to the console each time `value` or `condition` change. You cannot print to the console ONLY when `value` changes because `useEffect` wants that [all values used by the effect are passed in the array of dependencies](https://reactjs.org/docs/hooks-reference.html#conditionally-firing-an-effect).
 
 ## The solution
 
@@ -88,11 +88,16 @@ Also check the general [rules of hooks](https://reactjs.org/docs/hooks-rules.htm
 Below are the features we're working on:
 
 - [ ] Why stop with granular effect? granular memos and callback are calling too! Stay tuned.
+- [ ] What if we could also use a custom dependency comparer (other than the default `Object.is`)?
 - [ ] React hooks have a great [ESLint plugin](https://reactjs.org/docs/hooks-rules.html#eslint-plugin) that makes sure you don't forget to list dependencies when calling them. `granular-hooks` are still missing such tools.
 
 ## FAQ
 
-### Can I leave either the array of primary or secondary dependencies empty?
+### Can I leave the primary array of dependencies empty?
+
+You can. That means that the effect will only run once, when the component is mounted (the initial render).
+
+### Can I leave the secondary array of dependencies empty?
 
 You could but that would defeat the purpose of the hook. You might as well call `useEffect` directly.
 
@@ -101,3 +106,5 @@ You could but that would defeat the purpose of the hook. You might as well call 
 While you could technically do so, it would violate the rules exposed in [conditionally firing an effect](https://reactjs.org/docs/hooks-reference.html#conditionally-firing-an-effect):
 
 > make sure the array includes all values from the component scope (such as props and state) that change over time and that are used by the effect. Otherwise, your code will reference stale values from previous renders.
+
+Having said that, it should still work as you intended (see [Understanding dependencies in useEffect](https://medium.com/@gfox1984/understanding-dependencies-in-useeffect-7afd4df37c96). `useGranularEffect` will however help you be explicit about your dependencies and make sure that the effect is called with an exhaustive list of dependencies, even though this is not stricly necessary *technically speaking*.
