@@ -107,4 +107,4 @@ While you could technically do so, it would violate the rules exposed in [condit
 
 > make sure the array includes all values from the component scope (such as props and state) that change over time and that are used by the effect. Otherwise, your code will reference stale values from previous renders.
 
-Having said that, it should still work as you intended (see [Understanding dependencies in useEffect](https://medium.com/@gfox1984/understanding-dependencies-in-useeffect-7afd4df37c96)). `useGranularEffect` will however help you be explicit about your dependencies and make sure that the effect is called with an exhaustive list of dependencies, even though this is not stricly necessary *technically speaking*.
+Having said that, it should still work as you intended (see [Understanding dependencies in useEffect](https://medium.com/@gfox1984/understanding-dependencies-in-useeffect-7afd4df37c96)). `useGranularEffect` will however help you be explicit about your dependencies and make sure that the effect is called with an exhaustive list of dependencies, even though this is not stricly necessary _technically speaking_.
