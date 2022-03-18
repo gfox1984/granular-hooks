@@ -17,6 +17,9 @@
     "hooks",
     "granular",
     "useEffect",
+    "useMemo",
+    "useCallback",
+    "useLayoutEffect",
     "useGranularEffect"
   ],
   "homepage": "https://github.com/gfox1984/granular-hooks",
