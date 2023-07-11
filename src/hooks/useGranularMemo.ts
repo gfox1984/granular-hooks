@@ -5,6 +5,6 @@ const useGranularMemo = <T>(
   factory: () => T,
   primaryDeps: DependencyList,
   secondaryDeps: DependencyList
-) => useGranularHook(useMemo, factory, primaryDeps, secondaryDeps);
+) => useGranularHook(useMemo, factory, primaryDeps, secondaryDeps) as T;
 
 export default useGranularMemo;
